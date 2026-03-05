@@ -22,16 +22,18 @@ while(True):
     if int(txtIn) == 1:
         print("Inserire la parola e la traduzione da aggiungere:")
         entry = input()
-        t.handleAdd(txtIn) #prima le gestisco e una volta gestite le aggiungo
+        t.handleAdd(entry) #prima le gestisco e una volta gestite le aggiungo
     if int(txtIn) == 2:
         print("Inserisci la parola da cercare:")
         query = input()
-        t.handleTranslate(txtIn)
+        t.handleTranslate(query)
     if int(txtIn) == 3:
         print("Inserisci la parola con wildcard:")
         query = input()
-        t.handleWildCard(txtIn)
-
+        t.handleWildCard(query)
+    if int(txtIn) == 5:
+        t.stampaDizionario()
     if int(txtIn) == 4:
         print("Chiusura programma")
         break
+
